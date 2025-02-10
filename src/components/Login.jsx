@@ -1,19 +1,21 @@
 
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 
 export const Login = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [error, setError] = useState(null);
 
     const onSubmit = async (values) => {
         setError(null);
         try {
             const { email, password } = values;
-            const { data } = await axios.post("http://localhost:5000", { email, password });
+            const { data } = await axios.post("/api/login", { email, password });
             console.log(data);
+            // reset(); // Reset the form
         } catch (err) {
+            console.error("Error:", err);
             setError(err.message);
         }
     };
