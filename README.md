@@ -1,15 +1,20 @@
-## Boilerplate
+# React Boilerplate
 
------
+---
 
 ```bash
-git clone https://github.com/mikdanjey/react-code-sandbox.git React-Code-Sandbox
+curl -L https://github.com/mikdanjey/react-code-sandbox/archive/refs/heads/main.zip | bsdtar -xvf- && mv react-code-sandbox-main my-new-project
 ```
 
-```bash
-yarn install
-```
+---
 
 ```bash
-yarn start
+cd my-new-project
+```
+
+---
+
+
+```bash
+git init && git add --all && git commit -m "Initial commit"
 ```
