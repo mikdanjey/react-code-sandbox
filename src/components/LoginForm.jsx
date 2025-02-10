@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
-export const Login = () => {
+export const LoginForm = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [error, setError] = useState(null);
 

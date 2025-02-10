@@ -1,11 +1,13 @@
 import React from "react";
 
-import { Login } from "./components/Login";
+import { LoginForm } from "./components/LoginForm";
+import { ProductForm } from "./components/ProductForm";
 
 export default function App() {
   return (
     <>
-      <Login />
+      <LoginForm />
+      <ProductForm />
     </>
   )
 }
